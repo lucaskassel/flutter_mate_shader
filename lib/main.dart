@@ -16,19 +16,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const Mate(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class Mate extends StatefulWidget {
+  const Mate({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Mate> createState() => _MateState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
+class _MateState extends State<Mate> with TickerProviderStateMixin {
   late final AnimationController _controller;
   late AnimationController _pulse;
   late Tween<double> _intensityTween;
