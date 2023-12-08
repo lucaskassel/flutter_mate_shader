@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Mate Shader',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: const Mate(),
     );
@@ -34,7 +35,7 @@ class _MateState extends State<Mate> with TickerProviderStateMixin {
   late Tween<double> _intensityTween;
   late double _currentIntensity; // Initial intensity value when tapped
   final double _minIntensity = 0.5;
-  final double _maxIntensity = 2.5;
+  final double _maxIntensity = 2.0;
 
   int _startTime = 0;
   double get _elapsedTimeInSeconds =>
@@ -54,7 +55,7 @@ class _MateState extends State<Mate> with TickerProviderStateMixin {
     )..repeat();
 
     _pulse = AnimationController(
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
 
